@@ -1,0 +1,87 @@
+/* Style Sheet If You Build It (table), They Will Come */
+/* Name:   Ayden McCall || 4/8/21                                     */
+
+
+/* Gradient target HTML body element tag */
+
+body {
+    background-image: linear-gradient(to right, rgba(179, 11, 156, 1), rgba(34, 16, 192, 0.7), rgba(8, 202, 236, 0.5), rgba(8, 236, 57, 0.5),
+    rgba(221, 236, 8, 0.7), rgba(252, 71, 0, 0.7), rgba(243, 8, 47, 1)) 
+}
+
+/* css target tableStyle class in HTML */
+
+.tableStyle {
+    background-color: rgba(255,255,255,.2);
+    font-size: 150%;
+    width: 900px;
+    height: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    border-width: 10px;
+    border-color: red;
+}
+/* css target HTML Table caption tag */
+
+caption#norm {
+    font-size: 2em;
+    margin-bottom: 10px;
+    background: -webkit-linear-gradient(45deg, rgb(179, 11, 156), rgb(34, 16, 192), rgb(8, 202, 236), rgb(7, 172, 43),
+    rgb(170, 167, 4), rgb(252, 71, 0), rgb(243, 8, 47));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+caption#reverse {
+    font-size: 2em;
+    margin-bottom: 10px;
+    background: -webkit-linear-gradient(180deg, rgb(179, 11, 156), rgb(34, 16, 192), rgb(8, 202, 236), rgb(7, 172, 43),
+    rgb(170, 167, 4), rgb(252, 71, 0), rgb(243, 8, 47));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* css target HTML Table thead tag */
+ 
+ 
+ 
+/* css target HTML Table tfoot tag */
+ 
+ 
+ 
+/* Add a pseudo-class selector (page 320) */
+/* For example --  :nth-child(even)       */
+ 
+
+ 
+ a:link, a:active {
+     color: rgb(73, 50, 205);
+ } 
+ a:hover, a:visited {
+    color: rgb(189, 6, 107);
+}
+ 
+/* use colgroup */
+.purple {
+    background-color:rgba(179, 11, 156, .5);
+}
+.blue {
+    background-color:rgba(73, 50, 205, .5)
+}
+/* Week 3, Wednesday Video Lesson Chapter 8 folder - Table Column Group, page 173 */
+
+.center {
+    text-align: center;
+}
+
+.transparent {
+    clear: both;
+    background-color: transparent;
+}
+
+td {
+    border: 1px solid grey;
+}
