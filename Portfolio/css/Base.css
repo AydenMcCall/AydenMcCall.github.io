@@ -84,7 +84,8 @@ main * {
 #selfie {
     width: 20rem;
     height: 20rem;
-    border: 2px solid black;
+    border: 2px black;
+    border-style: solid dotted;
     margin-left: 575px;
 }
 
