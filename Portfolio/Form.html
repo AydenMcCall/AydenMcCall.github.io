@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--Ayden McCall 4/10/2021-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Personal Portfolio">
+        <meta name="Keywords" content="position, programming, portfolio, application">
+        <meta name="Author" content="Ayden McCall">
+        <meta name="viewport" content="width=device-width, initiial-scale=1.0">
+        <link rel="stylesheet" href="css/Base.css">
+        <link rel="stylesheet" href="css/formstyles.css">
+        <title>Ayden McCall Portfolio </title>
+    </head>
+
+    <body>
+        <header>
+            <a href="Index.html" id="name">Ayden McCall</a>
+            <nav>
+                <ul>
+                    <a href="Form.html"><li class="nav_links">Contact me</li></a>
+                    <a href="About.html"><li class="nav_links">Experience</li></a>
+                    <a href="Index.html"><li class="nav_links">Home</li></a>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h2>I'm always looking for ways to improve! If you have any feedback, let me know!</h2>
+                <form action="mailto:AydenMcCall@my.cwi.edu" method="POST" enctype="multipart/form-data"
+                name="EmailForm">
+
+                    <div id="origin">Where did you hear about me?</div>
+                    <div>
+                        <label for="Github">GitHub</label>
+                        <input type="radio" id="Github" name="HeardOf" value="Github">
+                    </div>
+                    <div>
+                        <label for="Recommendation">Recommendation</label> 
+                        <input type="radio" id="Recommendation" name="Heard_Of" value="Recommendation">
+                    </div>
+                    <div>
+                        <label for="Other">Other</label>
+                        <input type="radio" id="Other" name="HeardOf" value="Other">
+                    </div>
+                    <div>
+                        <label for="firstname">First Name:</label> 
+                        <input type="text" id="firstname" name="First_Name"> 
+                    </div>
+                    <div>
+                        <label for="lastname">Last Name:</label>
+                        <input type="text" id="lastname" name="Last_Name"> 
+                    </div>
+                    <div>
+                        <label for="contact">Email or Phone Number:</label>
+                        <input type="text" id="contact" name="Contact_Info"> 
+                    </div>
+                    <div id="inputdiv">
+                        <textarea id="content" name="Message" rows="6"></textarea>
+                        <label for="content">Write me a message:</label>
+                    </div>
+                    <input type="submit" value="Submit" id="submit">
+                </form>
+        </main>
+        <footer>
+                <p>Phone: <a href="tel:12089998212">1-(208) 999-8212</a><br />
+                Email: <a href="mailto:AydenMcCall@my.cwi.edu">AydenMcCall@my.cwi.edu</a></p>
+                <a href="https://github.com/aydenmccall"><img src="images/githubicon.png" alt="GitHub"></a>
+                <a href="https://www.linkedin.com/in/ayden-mccall-29255a202/"><img src="images/linkedinicon.png" alt="LinkedIn"></a>
+        </footer>
