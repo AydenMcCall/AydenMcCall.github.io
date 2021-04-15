@@ -95,11 +95,11 @@ main * {
     margin-bottom: 20px;
 }
 
-/*.colorful {
+.colorful {
     background-image: linear-gradient(to right, rgb(128, 28, 241), rgba(128, 28, 241, .5), rgba(241, 28, 195, .5), rgb(241, 28, 195));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-}*/
+}
 
 p {
     text-align: center;
