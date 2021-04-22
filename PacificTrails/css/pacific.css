@@ -25,17 +25,25 @@ nav ul {
 	padding: 6px 0px;
 	margin: 0px;
 	list-style: none;
-	
 }
 
 nav ul li 
 { 
-	float: left;
+	display: inline;
 	margin: 0px 15px;
 	text-decoration: none; 
 }
 
 /***** MAIN ******/
+
+#title {
+	text-decoration: none;
+	color: white;
+}
+
+#title:hover {
+	color: pink;
+}
 
 h1 
 { 
@@ -52,7 +60,7 @@ h2
 h3 
 { 
 	color: #000033;
-    family: Georgia, 'Times New Roman', serif; 
+    font-family: Georgia, 'Times New Roman', serif; 
 }
 
 .resort 
@@ -82,7 +90,8 @@ footer
 	font-size: 75%;
     font-style: bold;
 	text-align: center;
-	family: Georgia, 'Times New Roman', serif;
+	font-family: Georgia, 'Times New Roman', serif;
+	background-image: linear-gradient(transparent, #90C7E3 40%);
 }
 	   
 dt 
@@ -91,4 +100,24 @@ dt
 }
 
 
+/****** MOBILE ******/
+@media screen and (max-width: 640px) {
+	
+	nav ul li{
+		display: block;
+	}
+	h2, img {
+		display: none;
+	}
+	
+}
 
+/****** TABLET ******/
+@media only screen and (min-width: 641px){
+	nav ul li{
+		display: inline;
+	}
+	h2, image {
+		display: block;
+	}
+}
