@@ -91,7 +91,7 @@ footer {
 		background-image: none;
 	}
 
-	nav {
+	nav ul li{
 		display: block;
 	}
 
@@ -108,7 +108,7 @@ footer {
 		background-color: #F5F5F5; 
 	}
 
-	nav {
+	nav ul li {
 		display: inline;
 	}
 
