@@ -1,0 +1,75 @@
+/*
+Team Members: Ayden McCall, Atlee
+Date: 4/29/21
+File Name: styles.css
+*/
+
+.bg-red {
+    background-color: #780001;
+}
+
+.bg-light-blue {
+     background-color: #ccd5e6;   
+}
+
+.bg-black {
+    background-color: black;
+}
+
+.text-black {
+    color: black;
+}
+
+ nav .text-muted:hover, nav .text-black:hover {
+    color: black;
+    text-decoration:underline;
+}
+
+.pad {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+/*** Table ***/
+
+.tableStyle {
+    margin-left: -27%;
+    width: 155%;
+}
+
+tr:hover {
+    background-color: #f8f9fa;
+}
+
+/*** Input ***/
+
+select {
+    margin-bottom: 10px;
+}
+
+/* Show mobile class, hide tablet-desktop class and menu-links id */
+.mobile {
+    display: block;
+}
+
+.tablet-desktop {
+    display: none;
+}
+
+
+
+/* Media Query for Tablet Viewport */
+@media (min-width: 768px) {  
+
+    /* Tablet Viewport: Show tablet-desktop class, hide mobile class */
+    .tablet-desktop {
+        display: block;
+    }
+
+
+
+    .mobile {
+        display: none;
+    }
+    
+}
