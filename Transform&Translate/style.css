@@ -10,7 +10,7 @@ body {
 }
 
 .movable {
-  transform:scaleZ() translate(200px, 100px);
+  transform:translate(200px, 700px);
 }
 
 .hoverable {
