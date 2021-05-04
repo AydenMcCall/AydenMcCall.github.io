@@ -10,7 +10,7 @@ body {
 }
 
 .movable {
-  transform:translate(200px, 700px);
+  transform: translate(-100px, 50px);
 }
 
 .hoverable {
@@ -22,7 +22,7 @@ body {
   color: whitesmoke;
   border-radius: 50px;
   cursor: pointer;
-  transition: background 1s, transform .5s .25s ease;
+  transition: background 1s, transform .5s .15s ease-out;
 }
 
 .hoverable:hover {
