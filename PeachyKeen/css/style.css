@@ -1,0 +1,120 @@
+html {
+    background: white;
+    scroll-behavior: smooth;
+}
+
+/* NAVBAR */
+.bg-peachy {
+    background-color: 	#f37b8f;
+}
+
+nav {
+    background-image: linear-gradient(to right, #f37b8f 35%, rgba(255, 250, 250, 0.6), rgba(0, 0, 0, 0)), url(../images/Peachy.jpg);
+    background-repeat: repeat;
+}
+
+nav a {
+    color: rgb(255, 255, 255);
+    transition: 1s;
+}
+
+.navbar-brand {
+    font-size: 1.65em;
+}
+
+.nav-item {
+    font-size: 1.25em;
+}
+
+nav a:hover {
+    color: rgb(59, 34, 34);
+}
+
+/* HEADER */
+
+header {
+    margin-top: 60px;
+    height: 100px;
+    background-color: white !important;
+}
+
+/* MAIN */
+
+main div {
+    transition: 2s;
+}
+
+main div button {
+    width: 100%;
+}
+
+.carousel-control-next,
+.carousel-control-prev,
+.carousel-indicators /*, .carousel-indicators */ {
+    filter: invert(100%);
+}
+
+.carousel-item p {
+    float: left;
+    margin-left: 100px;
+    margin-top: 15px;
+    text-overflow: wrap;
+    font-size: 1.5em;
+}
+
+.carousel-item div img {
+    margin-right: 50px;
+}
+
+.craftsDisplay img {
+    margin-left: 100px;
+    max-height: 483px;
+}
+
+.bg-image {
+    background: linear-gradient(to right, rgb(189, 145, 145), rgb(240, 227, 227) 70%);
+}
+
+hr {
+    margin: 0;
+}
+
+/*** ABOUT US ***/
+
+article {
+    padding: 150px 0px;
+
+    font: 1.5em sans-serif;
+}
+
+/*** PRODUCTS ***/
+
+#order {
+    margin-bottom: 100px;
+}
+
+.card-text span {
+    font-size: 1.15em;
+}
+
+/* FOOTER */
+
+div.card {
+    width: 20rem;
+} 
+
+footer a {
+    color: rgb(255, 255, 255);
+}
+
+footer a:hover {
+    color: rgb(85, 8, 21);
+} 
+
+footer a i {
+    color: #126481;
+}
+
+footer a i:hover {
+    color:rgb(240, 239, 236)
+}
