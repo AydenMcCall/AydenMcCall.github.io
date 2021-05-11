@@ -1,0 +1,20 @@
+@mixin backImage($image, 
+    $height:100vh, 
+    $bgPos:center center) {
+    background: linear-gradient(rgba(1, 1, 1, 0), rgba(0, 0, 0, .7) 80%), url($image);
+    background-repeat: no-repeat;
+    background-position: $bgPos;
+    background-size: cover;
+    height: $height;
+}
+
+@mixin clearfix {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
