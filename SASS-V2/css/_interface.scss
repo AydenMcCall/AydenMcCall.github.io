@@ -40,7 +40,7 @@ $color-btn: (
     }
     img {
         display: block;
-        border-radius: nth($roundness, 1);
+        border-radius: $roundness;
         max-width: 100%;
     }
 }
