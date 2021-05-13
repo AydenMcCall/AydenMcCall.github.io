@@ -1,0 +1,206 @@
+/* Ayden McCall, 5/7/21 */
+
+html {
+    background: white;
+    scroll-behavior: smooth;
+}
+
+/* NAVBAR */
+.bg-peachy {
+    background-color: 	#f37b8f;
+}
+
+nav {
+    background-image: linear-gradient(to right, #f37b8f 35%, rgba(255, 250, 250, 0.6), rgba(0, 0, 0, 0)), url(../images/Peachy.jpg);
+    background-repeat: repeat;
+}
+
+nav a {
+    color: rgb(255, 255, 255);
+    transition: 1s;
+}
+
+.navbar-brand {
+    font-size: 1.65em;
+}
+
+.nav-item {
+    font-size: 1.25em;
+}
+
+nav li:hover {
+    color: rgb(124, 110, 110);
+}
+
+/* HEADER */
+
+header {
+    margin-top: 60px;
+    height: 100px;
+    background-color: white !important;
+}
+
+/* MAIN */
+
+main p.intro {
+    font-size: 1.5em;
+}
+
+main div {
+    transition: 2s;
+}
+
+main div button {
+    width: 100%;
+}
+
+.carousel-control-next,
+.carousel-control-prev,
+.carousel-indicators /*, .carousel-indicators */ {
+    filter: invert(100%);
+}
+
+.carousel-item p {
+    float: left;
+    margin-left: 100px;
+    margin-top: 15px;
+    text-overflow: wrap;
+    font-size: 1.5em;
+}
+
+.bg-image {
+    background: linear-gradient(to right, rgb(189, 145, 145), rgb(240, 227, 227) 70%);
+}
+
+hr {
+    margin: 0;
+}
+
+/*** ABOUT US ***/
+
+article {
+    padding: 150px 0px;
+    font: 1.5em sans-serif;
+}
+
+
+
+/*** PRODUCTS ***/
+
+#productRow {
+        column-count: 3;
+        -moz-column-count: 3;
+        column-fill: balance;
+        column-gap: 15px;
+}
+
+.row .card {
+    min-width: 300px;
+    margin: 10px auto
+}
+
+#order {
+    margin-bottom: 100px;
+}
+
+.card-text span {
+    font-size: 1.15em;
+}
+
+.modal button {
+    border: 1px solid black;
+    background-color: rgba(69, 36, 255, 0.5);
+}
+
+.modal button a {
+    color: rgb(0, 0, 0);
+}
+
+.modal button.unavailable {
+    background-color: grey;
+}
+
+/* SCHEDULE */
+
+#accordion {
+    margin: 0;
+    padding: 0;
+}
+
+.panel-collapse {
+    text-align: center;
+}
+
+.panel p {
+    font-size: 1.75em;
+}
+
+/* FOOTER */
+
+div.card {
+    width: 20rem;
+} 
+
+footer a {
+    color: rgb(255, 255, 255);
+}
+
+footer a:hover {
+    color: rgb(85, 8, 21);
+} 
+
+footer a i.icon {
+    color: #126481;
+    font-size: 2.5em;
+}
+
+footer a i.icon:hover {
+    color:rgb(240, 239, 236)
+}
+
+.carousel.no-mobile .img-fluid {
+    max-width: 80%;
+    min-width: 80%;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 600px) {
+    main {
+        margin-top: 100px;
+    }
+
+    .no-mobile {
+        display: none;
+    }
+
+    .mobile-only {
+        display: block;
+    }
+
+
+}
+
+@media only screen and (min-width: 601px) {
+    .mobile-only {
+        display: none;
+    }
+
+    .no-mobile {
+        display: block;
+    }
+
+    .no-mobile.row {
+        display: flex;
+    }
+
+    .carousel img {
+        max-width: 50%;
+        margin: 0 auto;
+    }
+
+    article {
+        background-image: linear-gradient(to left, #eeb3bc 20%, rgba(255, 250, 250, 0.6), rgba(0, 0, 0, 0)), url(../images/family.jpg);
+        background-repeat: no-repeat;
+    }
+    
+}
