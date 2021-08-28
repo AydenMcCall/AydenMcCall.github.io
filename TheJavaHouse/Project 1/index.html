@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<!--
+    Original Author: Ayden McCall
+    Change Log
+    8/26: File Creation and initialization
+    8/27: Header, Main, and footer content added, newsletter sign-up added, javascript and css edited. Credit for coffee header photo goes to PublicDomainPictures
+-->
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport"content="width=device-width, initial-scale=1">
+        <meta name="author" content="Ayden McCall">
+        <meta name="description" content="Sale of delicious and affordable coffee.">
+        <meta name="keywords" content="Coffee, Java, Dark Roast, Light Roast, Affordable, Homepage">
+        <link rel="icon" type="image/ico" href="img/favicon.ico">
+        <title>The Java House Home</title>
+
+        <link rel="stylesheet" href="css/coffee.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" 
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-lg p-3 bg-darkblue">
+            <!--Div 1 is to force div 2 below when neccessary, it is expanded to 100 width when hamburger is clicked-->
+            <div id="div1">
+                <a class="navbar-brand" href="index.html">The Java House</a>
+                <button id="hamburgerButton" class="float-end"><i class="fa fa-bars"></i></button>
+            </div>
+
+            <div class="topnav">
+                <ul class="navbar-nav nav-responsive">
+                    <a class="nav-link" href="index.html"><li class="nav-item nav-color active">Home</li></a>
+                    <a class="nav-link" href="#"><li class="nav-item nav-color">Store</li></a>
+                    <a class="nav-link" href="#"><li class="nav-item nav-color">About</li></a>
+                    <a class="nav-link" href="#"><li class="nav-item nav-color">Contact</li></a>
+                    <a class="nav-link mobile-only" href="#"><li class="nav-item nav-color">Cart</li></a>
+                </ul>
+                
+            </div>
+            
+            <a href="#" class="ms-auto me-4 desktop-only float-end" id="cart-link"><i class="fa fa-shopping-cart py-1 px-2" id="shopping-icon"> Cart</i></a>
+            
+        </nav>
+
+
+
+        <header>
+            <div class="coffee-bg">
+                <!-- Carousel or Main Image-->
+                <div class="text-wrap welcome">
+                    <h3>Welcome to The Java House! Dedicated to getting you your coffee fix.</h3>
+                </div>
+                
+            </div>
+        </header>
+
+        <main class="bg-darkblue">
+            <!-- Trending Pages and Items -->
+            <form>
+                <label for="newsletterEmail">Sign up for our newsletter!</label>
+                <input type="text" id="newsletterEmail" name="newsletterEmail">
+                <input type="button" id="submitNewsletterEmail" name="submitNewsletterEmail" value="Submit">
+                <label for="submitNewsletterEmail" id="newsletterError"></label>
+            </form>
+        </main>
+
+        <footer class="text-white text-center mt-3 bg-darkblue">
+            <p>Reach out to us through our <a class="nav-color" href="#">contact form!</a></p>
+            <a href="#"><i class="fa fa-facebook mx-3" style="font-size: 50px;"></i></a>
+            <a href="#"><i class="fa fa-instagram mx-3" style="font-size: 50px;"></i></a>
+        </footer>
+        <script src="js/coffee.js"></script>
+    </body>
+</html>
