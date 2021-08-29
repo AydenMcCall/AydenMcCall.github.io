@@ -1,9 +1,9 @@
 /*
-
     Original Author: Ayden McCall
     Change Log
     8/26: File Creation and initialization
     8/27: Added newsletter events, hamburger event
+    8/29: reworked hamburger event
 */
 
 "use strict";
@@ -39,13 +39,12 @@ const registerNewsletterEmail = () => {
 document.addEventListener("DOMContentLoaded", () => {
     $("#submitNewsletterEmail").addEventListener("click", registerNewsletterEmail);
     $("#hamburgerButton").addEventListener("click", () => {
-        let x = $(".topnav");
-        if (x.className === "topnav") {
-            x.className += " responsive";
-          } else {
-            x.className = "topnav";
-          }
-          $(".topnav") = x;
+            /* Adds active class which css displays as block */
+            if ($(".topnav").className == "topnav") {
+            $(".topnav").className = "topnav active";
+            } else {
+                $(".topnav").className = "topnav";
+            }
         }  
     )
 });

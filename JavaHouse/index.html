@@ -5,6 +5,7 @@
     Change Log
     8/26: File Creation and initialization
     8/27: Header, Main, and footer content added, newsletter sign-up added, javascript and css edited. Credit for coffee header photo goes to PublicDomainPictures
+    8/29: reworked navbar; added hover animation to navlinks; added social links in footer
 -->
 
 <html>
@@ -18,8 +19,8 @@
         <title>The Java House Home</title>
 
         <link rel="stylesheet" href="css/coffee.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" 
-        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" 
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 
@@ -33,16 +34,16 @@
 
             <div class="topnav">
                 <ul class="navbar-nav nav-responsive">
-                    <a class="nav-link" href="index.html"><li class="nav-item nav-color active">Home</li></a>
-                    <a class="nav-link" href="#"><li class="nav-item nav-color">Store</li></a>
-                    <a class="nav-link" href="#"><li class="nav-item nav-color">About</li></a>
-                    <a class="nav-link" href="#"><li class="nav-item nav-color">Contact</li></a>
-                    <a class="nav-link mobile-only" href="#"><li class="nav-item nav-color">Cart</li></a>
+                    <a class="nav-link hoverEffect" href="index.html"><li class="nav-item nav-color active">Home</li></a>
+                    <a class="nav-link hoverEffect" href="#"><li class="nav-item nav-color">Store</li></a>
+                    <a class="nav-link hoverEffect" href="#"><li class="nav-item nav-color">About</li></a>
+                    <a class="nav-link hoverEffect" href="#"><li class="nav-item nav-color">Contact</li></a>
+                    <a class="nav-link hoverEffect" href="#"><li class="nav-item nav-color mobile-only">Cart</li></a>
                 </ul>
                 
             </div>
             
-            <a href="#" class="ms-auto me-4 desktop-only float-end" id="cart-link"><i class="fa fa-shopping-cart py-1 px-2" id="shopping-icon"> Cart</i></a>
+            <a href="#" class="ml-auto p-1 hoverEffect desktop-only" id="shopping-icon"><i class="fa fa-shopping-cart"> Cart</i></a>
             
         </nav>
 

@@ -1,24 +1,22 @@
-
 /*
-
     Original Author: Ayden McCall
     Change Log
     8/26: File Creation and initialization
     8/27: Added media queries, header and main content
+    8/29: Reworked media queries; added animation to navlinks
 */
-/* HTML */
-.bg-darkblue {
-    background-color: #25274D;
-}
 
-.mobile-only {
-    display: none;
-}
+/* HTML */
+
 
 /* NAVBAR */
 nav {
     /*background-color: #5f2f0d;*/
     font-size: 1.3em;
+}
+
+.bg-darkblue {
+    background-color: #25274D;
 }
 
 .topnav .active {
@@ -51,13 +49,28 @@ nav a:hover {
     font-size: 1.8em;
 }
 
-#shopping-icon:hover {
-    border: 1px solid snow;
+@keyframes hover {
+    from {}
+    to {
+        margin-right: +10px;
+        margin-left: +10px;
+    }
+
+}
+
+.hoverEffect:hover {
+    animation-name: hover;
+    animation-delay: .1s;
+    animation-duration: 1.5s;
+    animation-fill-mode: both;
+    /*margin-right: +10px;
+    margin-left: +20px;*/
 }
 
 /*HEADER IMAGE*/
 header {
     color: snow;
+    padding-bottom: 10px;
 }
 
 header .coffee-bg {
@@ -104,16 +117,12 @@ footer {
 }
 
 /* MEDIA QUERY */
-@media (min-width: 601px) {
-    .desktop-only {
-        display: block;
-    }
-    .mobile-only {
-        display: none;
-    }
-    #div1 {
-        width: fit-content;
-    }
+
+.desktop-only {
+    display: block;
+}
+.mobile-only {
+    display: none;
 }
 
 @media (max-width: 600px) { 
@@ -128,34 +137,17 @@ footer {
         width: 100%;
     }
 
-    a.nav-link {
+    .topnav {
         display: none;
+    }
+
+    .topnav.active {
+        display: block;
     }
 
     #hamburgerButton {
         display: block;
     }
-
-    .topnav {
-        clear: both;
-    }
-
-    .topnav.responsive 
-    {
-        position: relative;
-    }
-
-    .topnav.responsive ul {
-        display: block;
-    }
-
-    .topnav.responsive a.nav-link {
-        float: none;
-        display: block;
-        text-align: left;
-    }
-
-
 
     header .coffee-bg {
         background-image: url(../img/coffee-640.jpg);
@@ -170,3 +162,5 @@ footer {
         font-size: 1.25em;
     }
 }
+
+
