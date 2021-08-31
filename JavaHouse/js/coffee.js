@@ -40,11 +40,12 @@ document.addEventListener("DOMContentLoaded", () => {
     $("#submitNewsletterEmail").addEventListener("click", registerNewsletterEmail);
     $("#hamburgerButton").addEventListener("click", () => {
             /* Adds active class which css displays as block */
-            if ($(".topnav").className == "topnav") {
+           /* if ($(".topnav").className == "topnav") {
             $(".topnav").className = "topnav active";
             } else {
                 $(".topnav").className = "topnav";
             }
-        }  
-    )
+        }  */const nav = document.querySelector($(".topnav"));
+        nav.classList.toggle("active");
+    })
 });
