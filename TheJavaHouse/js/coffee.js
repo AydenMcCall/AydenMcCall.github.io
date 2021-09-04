@@ -43,6 +43,7 @@ const removeAllChildren = parent => {
 
 
 document.addEventListener("DOMContentLoaded", () => {
+
     if ($("#submitNewsletterEmail") != null) {
         $("#submitNewsletterEmail").addEventListener("click", registerNewsletterEmail);
     }

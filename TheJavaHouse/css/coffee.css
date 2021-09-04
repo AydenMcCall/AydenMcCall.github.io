@@ -148,6 +148,8 @@ div.open {
     color: cyan;
 }
 
+
+
 /* FOOTER */
 
 footer {
@@ -197,6 +199,15 @@ footer {
 
     footer p {
         font-size: 1.25em;
+    }
+
+    /* FAQ MAIN */
+
+    div#faq.flexBox {
+        display: block;
+    }
+    div.flexChild {
+        margin-bottom: 100px;
     }
 }
 
