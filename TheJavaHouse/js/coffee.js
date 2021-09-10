@@ -5,61 +5,55 @@
     8/27: Added newsletter events, hamburger event
     8/29: Reworked hamburger event
     9/2: Added form support for contact page, FAQ links established
+    9/8: Jquery added, doesn't work
+    9/9: Jquery breaks literally every single webpage, fix in progress
+    9/10: jQuery fixed on case by case basis; carousel fully functional
 */
 
 "use strict";
 
-const $ = selector => document.querySelector(selector);
+//const $ = selector => document.querySelector(selector);
 
-const newsLetterError = () => {
-    const errorMsg=`Email is invalid.`;
+function newsLetterError() {
+    const errorMsg = "\nEmail is invalid.";
 
-    $("#newsletterError").style.display = "block";
-    $("#newsletterError").classList.add("failed");
-    $("#newsletterError").textContent = errorMsg;
-    $("#newsletterEmail").value = "";
+    $("#newsletterError").addClass("display");
+    $("#newsletterError").addClass("failed");
+    $("#newsletterError").text(errorMsg);
+    $("#newsletterEmail").val("")
     $("#newsletterEmail").focus();
 };
 
-const registerNewsletterEmail = () => {
-    const email = $("#newsletterEmail").value;
-    $("#newsletterError").classList = "";
+function registerNewsletterEmail () {
+    const email = $("#newsletterEmail").val();
     if(!isNaN(email) || email == "") {
             newsLetterError();
         } else {
-        $("#newsletterEmail").value = "";
-        $("#newsletterError").classList.add("successful");
-        $("#newsletterError").textContent = "Thank you for subscribing to our newsletter! Check your email for great offers tailored to your needs!";
-        $("#newsletterError").style.display = "block";
+        $("#newsletterEmail").val("");
+        $("form").addClass("noDisplay");
+        $("#newsletterCompletion").removeClass("noDisplay");
     }
 };
 
-// Remove all error messages from ul
-const removeAllChildren = parent => {
-    while(parent.firstChild) {
-        parent.removeChild(parent.firstChild);
-    }
-} 
 
-
-document.addEventListener("DOMContentLoaded", () => {
-
-    if ($("#submitNewsletterEmail") != null) {
-        $("#submitNewsletterEmail").addEventListener("click", registerNewsletterEmail);
-    }
-    $("#hamburgerButton").addEventListener("click", () => {
+$(document).ready(function() { 
+    if ($("#submitNewsletterEmail").length) {
+        $("#submitNewsletterEmail").on("click", registerNewsletterEmail);
+    }//End NewsletterButton
+    $("#hamburgerButton").on("click", () => {
             const nav = document.querySelector("#topnav");
         nav.classList.toggle("active");
-    });
+    });//End Hamburger
 
     if ($("#submitBtn") != null) {
-        $("#submitBtn").addEventListener("click", () => {
+        $("#submitBtn").on("click", () => {
             
-            removeAllChildren($("#errorList"));
+            $("#errorList").empty();
+
             
             const errorList = $("#errorList");
-            const email = $("#emailInput").value;
-            const message = $("#messageArea").value;
+            const email = $("#emailInput").val();
+            const message = $("#messageArea").val();
             let isValid = true;
             
             
@@ -67,42 +61,84 @@ document.addEventListener("DOMContentLoaded", () => {
                 let error = document.createElement("LI");
                 // error.appendChild(document.createTextNode("Email cannot be left empty./n"));
                 error.textContent = "Email cannot be left empty. \n";
-                errorList.classList = "display";
-                errorList.appendChild(error);
+                errorList.addClass("display");
+                errorList.append(error);
                 isValid = false;
             }
             if (message == "" || message == "Enter your message here!") {
                 let error = document.createElement("LI");
                 error.textContent = "Please leave a message. \n";
-                errorList.classList = "display";
-                errorList.appendChild(error);
+                errorList.addClass("display");
+                errorList.append(error);
                 isValid = false;
             }
 
             if (isValid) {
-                $("#contactForm").classList.add("noDisplay");
-                if ($("#businessRadio").checked) {
-                    $("#contactForm").nextElementSibling.textContent = "Thank you for your inquery! Expect a response within 2-3 business days.";
-                } else if ($("#questionRadio").checked) {
-                    $("#contactForm").nextElementSibling.textContent = "Thank you for your patience, we'll get back to you as soon as possible. Make " +
-                    "sure to check the Q&A board in the meantime!";
+                $("#contactForm").addClass("noDisplay");
+                if ($("#businessRadio").is(":checked")) {
+                    $("#contactForm").next().text("Thank you for your inquery! Expect a response within 2-3 business days.");
+                } else if ($("#questionRadio").is(":checked")) {
+                    $("#contactForm").next().text("Thank you for your patience, we'll get back to you as soon as possible. Make " +
+                    "sure to check the Q&A board in the meantime!");
                 }
-                $("#contactForm").nextElementSibling.classList.remove("noDisplay");
+                console.log( $("#contactForm").next().classList);
+                $("#contactForm").next().removeClass("noDisplay");
             } 
         });
+    }//End Submit
+
+    if ($("#accordion").length) {
+        $("#accordion").accordion({
+            collapsible: true,
+            active: false,
+            animate: 300,
+        });
     }
-    
-    if (document.getElementsByClassName("expandable") != null) {
-        
-        let QA = document.getElementsByClassName("expandable");
-        console.log(QA);
-        for (const questionPrompt of QA) {
-            console.log(questionPrompt);
-            questionPrompt.addEventListener("click", evt => {
-                const pElement = evt.currentTarget.parentNode.nextElementSibling;
-                console.log(pElement);
-                pElement.classList.toggle("noDisplay");
-            });
+
+    //Carousel
+    if ($(".carousel").length) {
+        let links = $(".carouselImage");
+        let selected = 0;
+        links[selected].classList.remove("noDisplay");
+
+        function carouselForward () {
+            jQuery(links[selected]).fadeOut(400);
+            //jQuery(links).addClass("noDisplay");
+            selected +=1;
+            if (selected > links.length - 1) {
+                selected = 0;
+            }
+            jQuery(links[selected]).delay(400).fadeIn(400);
+            //links[selected].classList.remove("noDisplay");
         }
-    }
+
+        let timer = setInterval(carouselForward, 5000);
+
+        function resetTimer (func, seconds) {
+                clearInterval(timer);
+                timer = setInterval(func, (seconds * 1000));
+        }
+        //eventListeners for both buttons
+        $("#leftButton").on("click", () => {
+            jQuery(links[selected]).fadeOut(400);
+            //jQuery(links[selected]).addClass("noDisplay");
+            selected -=1;
+            if (selected < 0) {
+                selected = links.length - 1;
+            }
+                //links[selected].classList.remove("noDisplay");  
+                resetTimer(carouselForward, 5);
+                jQuery(links[selected]).delay(400).fadeIn(400);
+        });
+        $("#rightButton").on("click", () => {
+            carouselForward();
+            resetTimer(carouselForward, 5);
+        });
+
+        
+        
+    }//End Carousel
 });
+
+
+    

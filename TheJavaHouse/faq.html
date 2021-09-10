@@ -4,6 +4,7 @@
     Original Author: Ayden McCall
     Change Log
     9/2: Instantiation, Javascript set-up and base content
+    9/9
 -->
 
 <html>
@@ -22,6 +23,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" 
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui.css">
         <link rel="stylesheet" href="css/coffee.css">
     </head>
 
@@ -57,23 +59,16 @@
         <main class="text-center">
             <!-- Trending Pages and Items -->
             <h2 class="mb-4"><i>Commonly asked questions</i></h2>
-            <div class="flexBox" id="faq">
-                <div class='flexChild'>
-                    <h3><a href="#" class="expandable">Where do you source your coffee?</a></h3>
-                    <p class="noDisplay">Our coffee is sourced straight from the Caribian Coffee Company. Grown completely naturally, it is the natural choice for 
-                        our discerning customers.
-                    </p>
-                </div>
-                <div class='flexChild'>
-                    <h3><a href="#" class="expandable">What is your return policy?</a></h3>
-                    <p class="noDisplay">For appliances, we allow returns up to 6 months. For edible products, we allow returns within 2 months so long that they remain unopened.</p>
-                </div>
-                <div class='flexChild'>
-                    <h3><a href="#" class="expandable">How long will it take for my order to arrive?</a></h3>
-                    <p class="noDisplay">Our delivery timings vary from product to product, but you can usually expect orders to arrive within 4-5 business
-                         days. You can view your orders expected delivery times in your orders as well. 
-                    </p>
-                </div>
+
+            <div id="accordion" class="w-50 mx-auto">
+                <h3>Where do you source your coffee?</h3>
+                <div>Our coffee is sourced straight from the Caribian Coffee Company. Grown completely naturally, it is the natural choice for 
+                    our discerning customers.</div>
+                <h3>What is your return policy?</h3>
+                <div>For appliances, we allow returns up to 6 months. For edible products, we allow returns within 2 months so long that they remain unopened.</div>
+                <h3>How long will it take for my order to arrive?</h3>
+                <div>Our delivery timings vary from product to product, but you can usually expect orders to arrive within 4-5 business
+                    days. You can view your orders expected delivery times in your orders as well.</div>
             </div>
         </main>
 
@@ -82,6 +77,8 @@
             <a href="#"><i class="fa fa-facebook mx-3" style="font-size: 50px;"></i></a>
             <a href="#"><i class="fa fa-instagram mx-3" style="font-size: 50px;"></i></a>
         </footer>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="js/jquery-ui-1.12.1/jquery-ui.js"></script>
         <script src="js/coffee.js"></script>
         <!--<script src="coffee2.js"></script>-->
     </body>

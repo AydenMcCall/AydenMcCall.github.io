@@ -8,19 +8,20 @@
     9/2: added failed and successful classes for newsletter
 */
 
-/* HTML */
+/* BODY */
+.bg-darkblue {
+    background-color: #25274D;
+}
+
 .bg-black {
     background-color: black;
 }
+
 
 /* NAVBAR */
 nav {
     /*background-color: #5f2f0d;*/
     font-size: 1.3em;
-}
-
-.bg-darkblue {
-    background-color: #25274D;
 }
 
 #topnav .active {
@@ -38,6 +39,7 @@ nav a {
 
 .nav-color:hover {
     color: #2E9CCA;
+    text-decoration: none;
     transition: 1s;
 }
 
@@ -121,6 +123,7 @@ main {
 
 .flexChild {
     flex: 1;
+    
 }
 
 p.minus {
@@ -135,9 +138,27 @@ div.open {
     display: none;
 }
 
+.carouselImage {
+    padding-inline-start: 0px;
+}
+
+.carouselImage img {
+    max-width: 640px;
+    margin: auto;
+}
+
+#accordion {
+    width: 50%;
+}
+
+#accordion div {
+    padding: 15px;
+    background-color: #25274D;
+    color: white;
+}
+
 #newsletterError {
     margin-top: 4px;
-    display: none;
 }
 
 .failed {
@@ -147,7 +168,6 @@ div.open {
 .successful {
     color: cyan;
 }
-
 
 
 /* FOOTER */
@@ -195,6 +215,10 @@ footer {
     }
     header .coffee-bg div.welcome {
         width: 50%;
+    }
+
+    .carouselImage img {
+        width: 225px;
     }
 
     footer p {
