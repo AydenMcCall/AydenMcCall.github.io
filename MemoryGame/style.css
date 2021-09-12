@@ -1,0 +1,22 @@
+body {
+    text-align: center;
+}
+
+.grid {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 300px;
+    width: 400px;
+}
+
+.hide {
+    display: none;
+}
+
+#announcer {
+    margin-top: 110px;
+    color: rgb(255, 0, 119);
+}
