@@ -17,6 +17,10 @@
     background-color: black;
 }
 
+.bg-navy {
+    background-color: #3e4188;
+}
+
 
 /* NAVBAR */
 nav {
@@ -41,6 +45,12 @@ nav a {
     color: #2E9CCA;
     text-decoration: none;
     transition: 1s;
+}
+
+#shopCounter {
+    border-radius: 50%;
+    font-size: 65%;
+    width: fit-content;
 }
 
 #logo {
@@ -161,6 +171,11 @@ div.open {
     margin-top: 4px;
 }
 
+/* STORE */
+div.flexChild h4 {
+    margin-bottom: 20px;
+}
+
 .failed {
     color: rgb(250, 87, 87);
 }
@@ -227,12 +242,15 @@ footer {
 
     /* FAQ MAIN */
 
-    div#faq.flexBox {
+    div.flexBox {
         display: block;
     }
     div.flexChild {
         margin-bottom: 100px;
     }
+
+    /* STORE MAIN */
+    div.flexBox img {
+        max-width: 320px;
+    }  
 }
-
-

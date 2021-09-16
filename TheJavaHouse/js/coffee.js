@@ -8,6 +8,7 @@
     9/8: Jquery added, doesn't work
     9/9: Jquery breaks literally every single webpage, fix in progress
     9/10: jQuery fixed on case by case basis; carousel fully functional
+    9/14: Begun shop support
 */
 
 "use strict";
@@ -45,6 +46,7 @@ $(document).ready(function() {
         nav.classList.toggle("active");
     });//End Hamburger
 
+    // Contact Form
     if ($("#submitBtn") != null) {
         $("#submitBtn").on("click", () => {
             
@@ -85,7 +87,7 @@ $(document).ready(function() {
                 $("#contactForm").next().removeClass("noDisplay");
             } 
         });
-    }//End Submit
+    }//End Contact Form
 
     if ($("#accordion").length) {
         $("#accordion").accordion({
@@ -134,11 +136,23 @@ $(document).ready(function() {
             carouselForward();
             resetTimer(carouselForward, 5);
         });
-
-        
-        
     }//End Carousel
-});
+    // Start Shop
+    if ($(".purchaseBtn").length) {
+        const purchaseBtns = $(".purchaseBtn");
+        for (let i = 0; i < purchaseBtns.length; i++) {
+            $(purchaseBtns[i]).on("click", () => {
+                const button = purchaseBtns[i];
+                $(button).hide(500);
+                $(button).next().delay(500).show(500);
+                let shopNumber = parseInt($("#shopCounter").text().charAt(1));
+                shopNumber += 1;
+
+                $("#shopCounter").text(`*${shopNumber}*`);
+            });
+        }
+    }// End Shop
+});// End Document Start
 
 
     
