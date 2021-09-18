@@ -7,6 +7,7 @@
     9/1: Incomplete Form addition
     9/2: Form Completion, exclusive style sheet created
     9/9: jQuery bugfixing and retrofitting
+    9/17: Email validation and placeholders added
 -->
 
 <html>
@@ -41,15 +42,14 @@
                 <ul class="navbar-nav nav-responsive">
                     <a class="nav-link hoverEffect nav-color" href="index.html"><li class="nav-item">Home</li></a>
                     <a class="nav-link hoverEffect nav-color" href="store.html"><li class="nav-item ">Store</li></a>
-                    <a class="nav-link hoverEffect nav-color" href="#"><li class="nav-item ">About</li></a>
                     <a class="nav-link hoverEffect nav-color" href="contact.html"><li class="nav-item active">Contact</li></a>
                     <a class="nav-link hoverEffect nav-color" href="faq.html"><li class="nav-item">FAQ</li></a>
-                    <a class="nav-link hoverEffect nav-color" href="#"><li class="nav-item  mobile-only">Cart</li></a>
+                    <!--<a class="nav-link hoverEffect nav-color" href="#"><li class="nav-item  mobile-only">Cart</li></a>-->
                 </ul>
                 
             </div>
             
-            <a href="#" class="ml-auto p-1 hoverEffect desktop-only nav-color" id="shopping-icon"><i class="fa fa-shopping-cart"> Cart</i></a>
+            <!--<a href="#" class="ml-auto p-1 hoverEffect desktop-only nav-color" id="shopIcon"><i class="fa fa-shopping-cart"> Cart</i></a>-->
             
         </nav>
 
@@ -64,7 +64,7 @@
             <ul id="errorList"></ul>
             <form id="contactForm">
                 <label for="emailInput">Email: </label>
-                <input type="text" id="emailInput" onclick="this.select();">
+                <input type="text" id="emailInput" onclick="this.select();" placeholder="anyone@anywhere.com">
                 <label for="emailInput" class="required">*</label> <br>
 
                 <label for="questionRadio">Suggestion: </label>
@@ -74,7 +74,7 @@
                 <label for="businessRadio">Business Inquery: </label>
                 <input type="radio" id="businessRadio" name="subject" value="Business"> <br>
 
-                <textarea rows="4" cols="40" id="messageArea" onclick="this.select();">Enter your message here!</textarea> <br>
+                <textarea rows="4" cols="40" id="messageArea" onclick="this.select();" placeholder="Enter your message here!"></textarea> <br>
 
                 <button type="button" id="submitBtn">Submit</button>
             </form>
@@ -82,7 +82,7 @@
         </main>
 
         <footer class="text-white text-center mt-3">
-            <p>Reach out to us through our <a class="nav-color" href="#">contact form!</a></p>
+            <p>Reach out to us through our <a class="nav-color" href="contact.html">contact form!</a></p>
             <a href="#"><i class="fa fa-facebook mx-3" style="font-size: 50px;"></i></a>
             <a href="#"><i class="fa fa-instagram mx-3" style="font-size: 50px;"></i></a>
         </footer>

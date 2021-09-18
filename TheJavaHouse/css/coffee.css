@@ -75,7 +75,7 @@ nav a {
     margin-top: 1.5%;
 }
 
-#shopping-icon {
+#shopIcon {
     font-size: 1.8em;
 }
 
@@ -94,6 +94,10 @@ nav a {
 header {
     color: snow;
     padding-bottom: 10px;
+}
+
+header.modalHeader {
+    width: 60%;
 }
 
 header .coffee-bg {
@@ -133,7 +137,14 @@ main {
 
 .flexChild {
     flex: 1;
-    
+}
+
+.flexChild2 {
+    flex: 4;
+}
+
+div.flexChild h4 {
+    margin-bottom: 20px;
 }
 
 p.minus {
@@ -172,8 +183,13 @@ div.open {
 }
 
 /* STORE */
-div.flexChild h4 {
-    margin-bottom: 20px;
+
+
+#storeModal {
+    height:fit-content;
+    width: max-content;
+    padding: 40px;
+    font-size: large;
 }
 
 .failed {
@@ -232,8 +248,17 @@ footer {
         width: 50%;
     }
 
+    .carousel div{
+        white-space: nowrap;
+        display: inline-block !important;
+    }
+
     .carouselImage img {
         width: 225px;
+    }
+
+    #accordion {
+        width: 70%
     }
 
     footer p {

@@ -5,7 +5,9 @@
     Pixabay Image Credit: Pexels; Free-Photos; Free-Photos; LoboStudioHamburg; shixugang; AliciaZinn; poedynchuk; danymena88;
     Change Log
     9/14: Creation
-    9/15: 
+    9/15: Buttons linked to cart
+    9/16: specific cart item data added; multiple item selection supported
+    9/17: mobile support; lots of bugfixing
 -->
 
 <html>
@@ -23,6 +25,7 @@
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
         <link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 
     </head>
 
@@ -38,21 +41,40 @@
                 <ul class="navbar-nav nav-responsive">
                     <a class="nav-link hoverEffect nav-color" href="index.html"><li class="nav-item">Home</li></a>
                     <a class="nav-link hoverEffect nav-color" href="store.html"><li class="nav-item active">Store</li></a>
-                    <a class="nav-link hoverEffect nav-color" href="#"><li class="nav-item ">About</li></a>
                     <a class="nav-link hoverEffect nav-color" href="contact.html"><li class="nav-item ">Contact</li></a>
                     <a class="nav-link hoverEffect nav-color" href="faq.html"><li class="nav-item ">FAQ</li></a>
-                    <a class="nav-link hoverEffect nav-color" href="#"><li class="nav-item mobile-only">Cart</li></a>
+                    <!--<a id="accordion" class="nav-link hoverEffect nav-color" href="#"><li class="nav-item mobile-only">Cart</li></a>-->
                 </ul>
+                    
             </div>
-
+            <div id="accordion" class="mobile-only w-100 text-center">                    
+                        <h3>Check Out</h3>
+                <div class="cartDiv">
+                    <p>Take a moment to confirm your order.</p>
+                    <ul class="cart"><li>Cart is Empty.</li></ul>
+                    <b class="mx-auto total"></b>
+                
+                <br>
+                <button type="button" class="mt-4">Procced to Payment</button>   
+            </div>  
+            </div>
             
-            <a href="#" class="ml-auto p-1 hoverEffect nav-color desktop-only" id="shopping-icon">
+            
+            <a href="#" class="ml-auto p-1 hoverEffect nav-color desktop-only" id="shopIcon">
                 <div class="bg-danger float-left" id="shopCounter">*0*</div><i class="fa fa-shopping-cart"> Cart</i></a>
-            
         </nav>
 
-        <header>
-            
+        <header class='modalHeader'>
+            <div id="storeModal" class="modal">
+                <p>Take a moment to confirm your order.</p>
+                <div class="cartDiv">
+                    <ul class="cart"><li>Cart is Empty.</li></ul>
+                    <b class="mx-auto total"></b>
+                </div>
+                <br>
+                <button type="button" class="mt-auto" rel="modal:close">Procced to Payment</button>
+                <a href="#" rel="modal:close"><button>Close</button></a>
+            </div>
         </header>
 
         <main>
@@ -65,6 +87,9 @@
                             <h4>Morning Blend</h4>
                             <img src="img/coffee_light.jpg" alt="Pouring milk into coffee"> <br>
                             <button class="purchaseBtn mt-3" type="button" value="Morning Blend" class="mt-3">Add to Cart</button>
+                            <select name="quantity" id="quantityDropdown" class=""><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option>
+                                <option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option>
+                                <option value="10">10</option></select>
                             <p class="noDisplay mt-3">Added to Cart!</p>
                         </div>
                     </div>
@@ -73,6 +98,7 @@
                             <h4>Hawaiian Roast</h4>
                             <img src="img/coffee_light2.jpg" alt="Cup of coffee with flower design"> <br>
                             <button class="purchaseBtn mt-3" type="button" value="Hawaiian Roast" class="mt-3">Add to Cart</button>
+                            <select name="quantity" id="quantityDropdown" class=""><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option></select>
                             <p class="noDisplay mt-3">Added to Cart!</p>
                         </div>
                     </div>
@@ -81,6 +107,7 @@
                             <h4>HuckleBerry Blend</h4>
                             <img src="img/coffee_light3.jpg" alt="Coffee splashing in mug"> <br>
                             <button class="purchaseBtn mt-3" type="button" value="HuckleBerry Blend" class="mt-3">Add to Cart</button>
+                            <select name="quantity" id="quantityDropdown" class=""><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option></select>
                             <p class="noDisplay mt-3">Added to Cart!</p>
                         </div>
                     </div>
@@ -93,7 +120,8 @@
                         <div class="m-1 py-3 bg-navy">
                             <h4>French Roast</h4>
                             <img src="img/coffee_dark.jpg" alt="Scoop of coffee beans"> <br>
-                            <button class="purchaseBtn mt-3" type="button" class="mt-3">Add to Cart</button>
+                            <button class="purchaseBtn mt-3" type="button" value="French Roast" class="mt-3">Add to Cart</button>
+                            <select name="quantity" id="quantityDropdown" class=""><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option></select>
                             <p class="noDisplay mt-3">Added to Cart!</p>
                         </div>
                     </div>
@@ -101,7 +129,8 @@
                         <div class="m-1 py-3 bg-navy">
                             <h4>House Blend</h4>
                             <img src="img/coffee_dark2.jpg" alt="Cup of coffee"> <br>
-                            <button class="purchaseBtn mt-3" type="button" class="mt-3">Add to Cart</button>
+                            <button class="purchaseBtn mt-3" type="button" value="House Blend" class="mt-3">Add to Cart</button>
+                            <select name="quantity" id="quantityDropdown" class=""><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option></select>
                             <p class="noDisplay mt-3">Added to Cart!</p>
                         </div>
                     </div>
@@ -109,7 +138,8 @@
                         <div class="m-1 py-3 bg-navy">
                             <h4>Traditional Roast</h4>
                             <img src="img/coffee_dark3.jpg" alt="Cup of coffee"> <br>
-                            <button class="purchaseBtn mt-3" type="button" class="mt-3">Add to Cart</button>
+                            <button class="purchaseBtn mt-3" type="button" value="Traditional Roast" class="mt-3">Add to Cart</button>
+                            <select name="quantity" id="quantityDropdown" class=""><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option></select>
                             <p class="noDisplay mt-3">Added to Cart!</p>
                         </div>
                     </div>
@@ -122,7 +152,8 @@
                         <div class="m-1 py-3 bg-navy">
                             <h4>Drip Pot</h4>
                             <img src="img/drip.jpg" alt="Pouring into coffee drip pot"> <br>
-                            <button class="purchaseBtn mt-3" class="mt-3">Add to Cart</button>
+                            <button class="purchaseBtn mt-3" type="button" value="Drip Pot" class="mt-3">Add to Cart</button>
+                            <select name="quantity" id="quantityDropdown" class=""><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option></select>
                             <p class="noDisplay mt-3">Added to Cart!</p>
                         </div>
                     </div>
@@ -130,7 +161,8 @@
                         <div class="m-1 py-3 bg-navy">
                             <h4>Espresso Machine</h4>
                             <img src="img/espresso_machine.jpg" alt="Espresso Machine Pouring a shot"> <br>
-                            <button class="purchaseBtn mt-3" class="mt-3">Add to Cart</button>
+                            <button class="purchaseBtn mt-3" type="button" value="Espresso Machine" class="mt-3">Add to Cart</button>
+                            <select name="quantity" id="quantityDropdown" class=""><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option></select>
                             <p class="noDisplay mt-3">Added to Cart!</p>
                         </div>
                     </div>
@@ -138,7 +170,8 @@
                         <div class="m-1 py-3 bg-navy">
                             <h4>French Press</h4>
                             <img src="img/french_press.jpg" alt="French press brewing"> <br>
-                            <button class="purchaseBtn mt-3" class="mt-3">Add to Cart</button>
+                            <button class="purchaseBtn mt-3" type="button" value="French Press" class="mt-3">Add to Cart</button>
+                            <select name="quantity" id="quantityDropdown" class=""><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option></select>
                             <p class="noDisplay mt-3">Added to Cart!</p>
                         </div>
                     </div>
@@ -148,13 +181,14 @@
         </main>
 
         <footer class="text-white text-center mt-3">
-            <p>Reach out to us through our <a class="nav-color" href="#">contact form!</a></p>
+            <p>Reach out to us through our <a class="nav-color" href="contact.html">contact form!</a></p>
             <a href="#"><i class="fa fa-facebook mx-3" style="font-size: 50px;"></i></a>
             <a href="#"><i class="fa fa-instagram mx-3" style="font-size: 50px;"></i></a>
         </footer>
         
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="js/jquery-ui-1.12.1/jquery-ui.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
         <script src="js/coffee.js"></script>
     </body>
 </html>
