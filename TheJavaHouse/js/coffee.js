@@ -12,6 +12,8 @@
     9/15: Id's and cart data created
     9/16: Modal Component Added
     9/17: styling added; carousel buffering smoothed
+    9/21: store files relocated to store.js
+    9/22: Shop timer implemented on buttons to avoid spam inputs
 */
 
 "use strict";
@@ -36,59 +38,14 @@ function registerNewsletterEmail () {
             newsLetterError();
         } else {
         $("#newsletterEmail").val("");
-        $("form").addClass("noDisplay");
-        $("#newsletterCompletion").removeClass("noDisplay");
+        $("form").fadeOut(200);
+        $("#newsletterCompletion").delay(190).fadeIn(200);
     }
 };//End Newsletter
 
-//Add To Cart
-function addToCart (button, quantity) {
-    
-    $(button).hide(500);
-    $(button).next().hide(500);
-    $(button).next().next().delay(500).show(500);
-    let shopNumber = $("#shopCounter").text().match(/(\d+)/);
-    shopNumber = parseInt(shopNumber);
-    shopNumber += parseInt(quantity);
 
-    $("#shopCounter").text(`*${shopNumber}*`);
 
-    let itemName = $(button).val();
-    let price = 0;
-    if(itemName === "Espresso Machine") {
-        price = 399.99;
-    } else if (itemName === "French Press") {
-        price = 199.99;
-    } else if(itemName === "Drip Pot") {
-        price = 99.99;
-    } else {
-        price = 24.99;
-    }
-    const items = [itemName, quantity, price];
-    return items;
-}//End Add To Cart
 
-//Create Cart String
-function refreshCart (cartItems) {
-    let cart = $(".cart");
-    cart.empty();
-    let dollarUS = Intl.NumberFormat("en-US", {
-        style: "currency",
-        currency: "USD",
-    });
-    let total = 0;
-    for(let i = 0; i < cartItems.length; i++) {
-        const item = cartItems[i][0];
-        const amount = cartItems[i][1];
-        let price = parseFloat(cartItems[i][2]);
-        total += price * amount;
-        let info = document.createElement("LI");
-        let text = document.createTextNode(`${amount} ${item}(s) - ${dollarUS.format(price * amount)}`);
-        info.appendChild(text);
-        $(cart).append(info);
-    }
-    $(".total").text(`Total: ${dollarUS.format(total)}`);
-};//End Cart String
 
 
 $(document).ready(function() { 
@@ -135,15 +92,14 @@ $(document).ready(function() {
             }
 
             if (isValid) {
-                $("#contactForm").addClass("noDisplay");
+                $("#contactForm").fadeOut(200);
                 if ($("#businessRadio").is(":checked")) {
                     $("#contactForm").next().text("Thank you for your inquery! Expect a response within 2-3 business days.");
                 } else if ($("#questionRadio").is(":checked")) {
                     $("#contactForm").next().text("Thank you for your patience, we'll get back to you as soon as possible. Make " +
                     "sure to check the FAQ board in the meantime!");
                 }
-                console.log( $("#contactForm").next().classList);
-                $("#contactForm").next().removeClass("noDisplay");
+                $("#contactForm").next().delay(190).fadeIn(200);
             } 
         });
     }//End Contact Form
@@ -176,7 +132,7 @@ $(document).ready(function() {
                 selected = 0;
             }
             jQuery(links[selected]).delay(400).fadeIn(400);
-            setTimeout(endBuffer, 800);
+            setTimeout(endBuffer, 820);
         }
 
         let timer = setInterval(carouselForward, 5000);
@@ -194,9 +150,9 @@ $(document).ready(function() {
                 if (selected < 0) {
                     selected = links.length - 1;
                 } 
-                    resetTimer(carouselForward, 5);
-                    jQuery(links[selected]).delay(400).fadeIn(400);
-                    setTimeout(endBuffer, 800);
+                resetTimer(carouselForward, 5);
+                jQuery(links[selected]).delay(400).fadeIn(400);
+                setTimeout(endBuffer, 820);
             }
            
            
@@ -211,16 +167,25 @@ $(document).ready(function() {
     }//End Carousel
 
     // Start Shop
-    let cartItems = [];
+    //let cartItems = [];
     if ($(".purchaseBtn").length) {
         const purchaseBtns = $(".purchaseBtn");
         for (let i = 0; i < purchaseBtns.length; i++) {
+            let animationTimer;
+            let animationPlaying = false;
             $(purchaseBtns[i]).on("click", () => {
-                const button = purchaseBtns[i];
-                const quantity = $(button).next().val();
-                
-                cartItems.push(addToCart(button, quantity));
-                refreshCart(cartItems);
+                const val = $(purchaseBtns[i]).val().split("/");
+                const quantity = $(purchaseBtns[i]).next().val();
+                const confirmText = $(purchaseBtns[i]).next().next();
+
+                // Animation Timer
+                if (!animationPlaying) {
+                    cart.confirmAdded(confirmText);
+                    animationPlaying = true;
+                    animationTimer = setTimeout(() => { animationPlaying = false; }, 2400);
+                }
+
+                cart.addItem(val[0], parseFloat(val[1]), quantity);
             });
         }
     }// End Shop
@@ -231,11 +196,7 @@ $(document).ready(function() {
             $("#storeModal").modal({
                 fadeDuration: 100,
                 showClose: false
-              });
-              if(cartItems.length) {
-                refreshCart(cartItems);
-              }
-            
+              });          
         })
     }//End Cart
 

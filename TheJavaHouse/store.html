@@ -8,6 +8,7 @@
     9/15: Buttons linked to cart
     9/16: specific cart item data added; multiple item selection supported
     9/17: mobile support; lots of bugfixing
+    9/21: store.js file created, linked to
 -->
 
 <html>
@@ -43,7 +44,6 @@
                     <a class="nav-link hoverEffect nav-color" href="store.html"><li class="nav-item active">Store</li></a>
                     <a class="nav-link hoverEffect nav-color" href="contact.html"><li class="nav-item ">Contact</li></a>
                     <a class="nav-link hoverEffect nav-color" href="faq.html"><li class="nav-item ">FAQ</li></a>
-                    <!--<a id="accordion" class="nav-link hoverEffect nav-color" href="#"><li class="nav-item mobile-only">Cart</li></a>-->
                 </ul>
                     
             </div>
@@ -86,7 +86,7 @@
                         <div class="m-1 py-3 bg-navy">
                             <h4>Morning Blend</h4>
                             <img src="img/coffee_light.jpg" alt="Pouring milk into coffee"> <br>
-                            <button class="purchaseBtn mt-3" type="button" value="Morning Blend" class="mt-3">Add to Cart</button>
+                            <button class="purchaseBtn mt-3" type="button" value="Morning Blend/24.99" class="mt-3">Add to Cart</button>
                             <select name="quantity" id="quantityDropdown" class=""><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option>
                                 <option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option>
                                 <option value="10">10</option></select>
@@ -97,7 +97,7 @@
                         <div class="m-1 py-3 bg-navy">
                             <h4>Hawaiian Roast</h4>
                             <img src="img/coffee_light2.jpg" alt="Cup of coffee with flower design"> <br>
-                            <button class="purchaseBtn mt-3" type="button" value="Hawaiian Roast" class="mt-3">Add to Cart</button>
+                            <button class="purchaseBtn mt-3" type="button" value="Hawaiian Roast/24.99" class="mt-3">Add to Cart</button>
                             <select name="quantity" id="quantityDropdown" class=""><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option></select>
                             <p class="noDisplay mt-3">Added to Cart!</p>
                         </div>
@@ -106,7 +106,7 @@
                         <div class="m-1 py-3 bg-navy">
                             <h4>HuckleBerry Blend</h4>
                             <img src="img/coffee_light3.jpg" alt="Coffee splashing in mug"> <br>
-                            <button class="purchaseBtn mt-3" type="button" value="HuckleBerry Blend" class="mt-3">Add to Cart</button>
+                            <button class="purchaseBtn mt-3" type="button" value="HuckleBerry Blend/24.99" class="mt-3">Add to Cart</button>
                             <select name="quantity" id="quantityDropdown" class=""><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option></select>
                             <p class="noDisplay mt-3">Added to Cart!</p>
                         </div>
@@ -120,7 +120,7 @@
                         <div class="m-1 py-3 bg-navy">
                             <h4>French Roast</h4>
                             <img src="img/coffee_dark.jpg" alt="Scoop of coffee beans"> <br>
-                            <button class="purchaseBtn mt-3" type="button" value="French Roast" class="mt-3">Add to Cart</button>
+                            <button class="purchaseBtn mt-3" type="button" value="French Roast/24.99" class="mt-3">Add to Cart</button>
                             <select name="quantity" id="quantityDropdown" class=""><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option></select>
                             <p class="noDisplay mt-3">Added to Cart!</p>
                         </div>
@@ -129,7 +129,7 @@
                         <div class="m-1 py-3 bg-navy">
                             <h4>House Blend</h4>
                             <img src="img/coffee_dark2.jpg" alt="Cup of coffee"> <br>
-                            <button class="purchaseBtn mt-3" type="button" value="House Blend" class="mt-3">Add to Cart</button>
+                            <button class="purchaseBtn mt-3" type="button" value="House Blend/24.99" class="mt-3">Add to Cart</button>
                             <select name="quantity" id="quantityDropdown" class=""><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option></select>
                             <p class="noDisplay mt-3">Added to Cart!</p>
                         </div>
@@ -138,7 +138,7 @@
                         <div class="m-1 py-3 bg-navy">
                             <h4>Traditional Roast</h4>
                             <img src="img/coffee_dark3.jpg" alt="Cup of coffee"> <br>
-                            <button class="purchaseBtn mt-3" type="button" value="Traditional Roast" class="mt-3">Add to Cart</button>
+                            <button class="purchaseBtn mt-3" type="button" value="Traditional Roast/24.99" class="mt-3">Add to Cart</button>
                             <select name="quantity" id="quantityDropdown" class=""><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option></select>
                             <p class="noDisplay mt-3">Added to Cart!</p>
                         </div>
@@ -152,7 +152,7 @@
                         <div class="m-1 py-3 bg-navy">
                             <h4>Drip Pot</h4>
                             <img src="img/drip.jpg" alt="Pouring into coffee drip pot"> <br>
-                            <button class="purchaseBtn mt-3" type="button" value="Drip Pot" class="mt-3">Add to Cart</button>
+                            <button class="purchaseBtn mt-3" type="button" value="Drip Pot/39.99" class="mt-3">Add to Cart</button>
                             <select name="quantity" id="quantityDropdown" class=""><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option></select>
                             <p class="noDisplay mt-3">Added to Cart!</p>
                         </div>
@@ -161,7 +161,7 @@
                         <div class="m-1 py-3 bg-navy">
                             <h4>Espresso Machine</h4>
                             <img src="img/espresso_machine.jpg" alt="Espresso Machine Pouring a shot"> <br>
-                            <button class="purchaseBtn mt-3" type="button" value="Espresso Machine" class="mt-3">Add to Cart</button>
+                            <button class="purchaseBtn mt-3" type="button" value="Espresso Machine/499.99" class="mt-3">Add to Cart</button>
                             <select name="quantity" id="quantityDropdown" class=""><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option></select>
                             <p class="noDisplay mt-3">Added to Cart!</p>
                         </div>
@@ -170,7 +170,7 @@
                         <div class="m-1 py-3 bg-navy">
                             <h4>French Press</h4>
                             <img src="img/french_press.jpg" alt="French press brewing"> <br>
-                            <button class="purchaseBtn mt-3" type="button" value="French Press" class="mt-3">Add to Cart</button>
+                            <button class="purchaseBtn mt-3" type="button" value="French Press/49.99" class="mt-3">Add to Cart</button>
                             <select name="quantity" id="quantityDropdown" class=""><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option></select>
                             <p class="noDisplay mt-3">Added to Cart!</p>
                         </div>
@@ -189,6 +189,7 @@
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="js/jquery-ui-1.12.1/jquery-ui.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+        <script src="js/store.js"></script>
         <script src="js/coffee.js"></script>
     </body>
 </html>

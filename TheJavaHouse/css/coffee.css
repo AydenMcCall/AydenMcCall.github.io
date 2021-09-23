@@ -6,6 +6,7 @@
     8/29: Reworked media queries; added animation to navlinks
     8/31: added color transitions and minor heading adjustments
     9/2: added failed and successful classes for newsletter
+    9/21: store support added
 */
 
 /* BODY */
@@ -192,6 +193,14 @@ div.open {
     font-size: large;
 }
 
+.remove {
+    color:rgb(160, 23, 23);
+}
+
+.remove:hover {
+    text-decoration: none;
+}
+
 .failed {
     color: rgb(250, 87, 87);
 }
@@ -246,6 +255,10 @@ footer {
     }
     header .coffee-bg div.welcome {
         width: 50%;
+    }
+
+    .remove {
+        color:rgb(160, 23, 23) !important;
     }
 
     .carousel div{
