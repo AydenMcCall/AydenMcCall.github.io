@@ -2,6 +2,7 @@
     Original Author: Ayden McCall
     Change Log 2021
     9/30: Creation
+    10/1: Full name validation added
 */
 
 "use strict"
