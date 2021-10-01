@@ -101,6 +101,10 @@ main {
     display: none;
 }
 
+.about {
+    width: 50%;
+}
+
 #errorList * {
     list-style-type: none;
     color:rgb(255, 0, 0);
@@ -195,6 +199,10 @@ footer {
 
     .nav-item {
         text-align: left;
+    }
+
+    .about {
+        width: 100%;
     }
 
     #projects {
