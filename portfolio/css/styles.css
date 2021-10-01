@@ -1,0 +1,211 @@
+/*
+    Original Author: Ayden McCall
+    Change Log 2021
+    9/28: Creation
+*/
+
+/* File Wide */
+body {
+    text-align: center;
+    background-color: rgba(150, 127, 255, 0.432);
+}
+
+p {
+    font-size: 1.25em;
+}
+
+/* NAVBAR */
+nav {
+    /*background-color: #5f2f0d;*/
+    font-size: 1.3em;
+    background-color: rgb(68, 171, 255);
+}
+
+#div1 {
+    width: auto;
+}
+
+.noUnderline, .noUnderline:hover {
+    text-decoration: none;
+}
+
+#name {
+    font-size: 1.5em;
+    margin-right: 10px;
+    color: snow; 
+    margin-bottom: 20px;
+    transition: 1s;
+    text-decoration: none;
+}
+
+#name:hover {
+    color: rgb(255, 218, 188); 
+    font-size: 1.6em;
+    text-decoration: none;
+}
+
+#hamburgerBtn {
+    display: none;
+}
+
+#topnav {
+    display: inline-flex;
+}
+
+#topnav .active {
+    color: #fdc07a;
+    transition: 1s;
+}
+
+#topnav .active:hover {
+    color: #ff8800;
+}
+
+nav a {
+    color: snow; 
+}
+
+.nav-link {
+    color: snow; 
+    margin-left: 10px;
+    padding-left: 10px;
+    transition: 1s;
+}
+
+.nav-link:hover {
+    color: #ff8800;
+    text-decoration: none;
+    /*padding-top: 15px;*/
+    padding-left: 20px !important;
+}
+
+#hamburgerButton {
+    display: none;
+}
+
+/* HEADER */
+
+header {
+    margin: 0px;
+    padding: 10px;
+}
+
+/* MAIN */
+
+main {
+    background-image: linear-gradient(to bottom right, rgb(212, 209, 245), snow, whitesmoke, rgb(227, 236, 250), rgb(217, 214, 250) 80%);
+    padding: 3%;
+}
+
+.hide {
+    display: none;
+}
+
+#errorList * {
+    list-style-type: none;
+    color:rgb(255, 0, 0);
+}
+
+#projects {
+    display:inline-flex;
+}
+
+#projects img {
+    width: 50%;
+}
+
+.projectCard {
+    background-color: rgba(105, 105, 105, 0.089);
+    margin: 10px 50px;
+    padding: 10px;
+    flex: 1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+/* TABLE */
+
+table {
+    width: 40%;
+}
+
+table th {
+    padding: 10px;
+    border: 2px solid black;
+    background-color: rgba(14, 58, 255, 0.378);
+}
+
+table td {
+    padding: 10px;
+    border: 1px solid black;
+    background-color: rgba(14, 58, 255, 0.1);
+}
+
+/* FOOTER */
+
+footer {
+    background-color: rgb(68, 171, 255);
+}
+
+.underline, .underline:hover {
+    text-decoration: underline;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 801px) {
+    
+    
+
+    .nav-link {
+        vertical-align: middle;
+    }
+    #div1 {
+        display: table;
+    }
+    #div1 a h3 {
+        display: table-cell
+    }
+}
+
+@media (max-width: 800px) {
+    #topnav {
+        display: none;
+    }
+
+    nav {
+        height: fit-content;
+    }
+
+    #div1 {
+        width: 100%;
+        height: 2em;
+        display: flex;
+        text-align: left;
+    }
+
+    #div1 a {
+        flex: 4;
+        
+    }
+
+    #hamburgerBtn {
+        display: block;
+    }
+
+    .nav-item {
+        text-align: left;
+    }
+
+    #projects {
+        display:block;
+    }
+
+    .projectCard {
+        margin-bottom: 3em;
+    }
+
+    #projects img {
+        width: 70%;
+    }
+}

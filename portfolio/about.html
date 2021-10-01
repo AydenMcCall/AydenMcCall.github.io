@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<!--
+    Original Author: Ayden McCall
+    Change Log 2021
+    9/29: Creation
+    9/30: Added table and links to previous projects
+    10/1: Changed title from "Experience" to "About"; links changed accordingly
+-->
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport"content="width=device-width, initial-scale=1">
+        <meta name="author" content="Ayden McCall">
+        <meta name="description" content="Portfolio of an up and coming web designer">
+        <meta name="keywords" content="Portfolio, Programming, Webdesign">
+        <!--Favicon?-->
+        <title>McCall Portfolio About</title>
+
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" 
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/styles.css">
+
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-lg">
+            <!--Div 1 is to force div 2 below when neccessary, it is expanded to 100 width when hamburger is clicked-->
+            <div id="div1">
+                <a class="noUnderline" href="index.html"><h3 id="name">Ayden McCall</h3></a>
+                <button id="hamburgerBtn"><i class="fa fa-bars"></i></button>
+            </div>
+
+            <div id="topnav">
+                <ul class="navbar-nav nav-responsive">
+                    <a class="nav-link" href="index.html"><li class="nav-item">Home</li></a>
+                    <a class="nav-link" href="about.html"><li class="nav-item active">About</li></a>
+                    <a class="nav-link" href="contact.html"><li class="nav-item">Contact</li></a>
+                </ul>
+            </div>
+        </nav>
+
+        <main>
+            <h2>A Bit About Me</h2>
+            <p>I'm Ayden, a Software Development major! Born in Boise, I have always been surrounded by both the great hills and mountains 
+                as well as a great community. 
+            </p>
+            <table class="mx-auto">
+                <tr>
+                    <th>Languages</th>
+                    <th>Level</th>
+                    <th>Experience</th>
+                </tr>
+                <tr>
+                    <td>C#</td>
+                    <td>Intermediate</td>
+                    <td>2 years</td>
+                </tr>
+                <tr>
+                    <td>HTML & CSS</td>
+                    <td>Experienced</td>
+                    <td>2.5 years</td>
+                </tr>
+                <tr>
+                    <td>Javascript</td>
+                    <td>Intermediate</td>
+                    <td>2 year</td>
+                </tr>
+            </table> <br>
+            <h2>Work Experience</h2>
+            <p>
+                I've taken up a variety of odd jobs over the years, as you often do when living on a farm. Someone's always indeed of a hand. 
+                I've established pipelines, planted too many trees to count, and dug a whole lot of trenches. 
+                What I've learned from it all is that grit is powerful. Pushing through even when it gets difficult can be tough, but rewarding as well. 
+                I've taken this thought proccess into my programming as well. 
+                When you don't understand something, it's important to not lose heart, and keep trying.
+            </p>
+            
+            <h2>Past Projects</h2>
+            <div id="projects">
+                <div class="projectCard"><a href="https://aydenmccall.github.io/TheJavaHouse/index.html">The Java House <br><img src="img/the_java_house1.png" alt="The JavaHouse Homepage"></a></div>
+                <div class="projectCard"><a href="https://aydenmccall.github.io/MemoryGame/index.html">Memory Game <br> <img src="img/memory_game.png" alt="Memory Game Page"></a></div>
+            </div>
+        </main>
+
+        <footer class="text-white text-center mx-auto pt-3 pb-4">
+            <p>Reach out to me through my <a class="underline" href="contact.html">contact form!</a></p>
+            <a href="#"><i class="fa fa-facebook mx-3" style="font-size: 50px;"></i></a>
+            <a href="#"><i class="fa fa-instagram mx-3" style="font-size: 50px;"></i></a>
+        </footer>
+        
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="js/universal.js"></script>
+    </body>
+</html>
