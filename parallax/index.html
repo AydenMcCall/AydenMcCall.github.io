@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<!--
+    Original Author: Ayden McCall
+    Modification Log:
+    10/7: Creation
+    10/8: Sections 2-4 Added; colors changed; navbar reworked; accordion added; carousel added; bootstrap js added
+-->
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Ayden McCall">
+        <meta name="description" content="A 1 page site that you can scroll through!">
+        <meta name="keywords" content="Website, scrollable">
+        <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" 
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <nav>
+            <ul class="d-inline-flex">   
+                <a href="#section1" class="nav-li"> <li>First</li></a>
+                <a href="#section2" class="nav-li"> <li>Second</li></a>
+                <a href="#section3" class="nav-li"> <li>Third</li></a>
+                <a href="#section4" class="nav-li"> <li>Fourth</li></a>
+                <a href="#section5" class="nav-li"> <li>Fifth</li></a>
+            </ul>
+        </nav>
+        <section id="section1">
+            <div>
+                <header>
+                    <h1>Lobortis mattis aliquam!</h1>
+                </header> <br>
+                <p class="w-75 mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Eget arcu dictum varius duis at consectetur. Et malesuada fames ac turpis egestas sed tempus. Duis ut diam quam nulla porttitor. 
+                    Ut sem viverra aliquet eget sit amet tellus cras. Diam ut venenatis tellus in. Placerat duis ultricies lacus sed turpis tincidunt id. 
+                    Venenatis cras sed felis eget velit. Volutpat ac tincidunt vitae semper. In pellentesque massa placerat duis ultricies lacus sed turpis. 
+                    Quam vulputate dignissim suspendisse in est. In egestas erat imperdiet sed euismod nisi porta lorem. Facilisis mauris sit amet massa vitae tortor 
+                    condimentum lacinia quis. Felis eget nunc lobortis mattis aliquam. Sed augue lacus viverra vitae congue eu consequat ac felis. Pellentesque id nibh 
+                    tortor id aliquet lectus proin nibh nisl. 
+                    Commodo viverra maecenas accumsan lacus vel facilisis volutpat. Nunc sed blandit libero volutpat sed cras ornare.</p>
+            </div>
+        </section>
+        <section id="section2">
+            <div class="row">
+                <div class="col-3"><img src="img/mountains-gd117fad74_640.jpg" alt="">
+                <p>Semper feugiat nibh sed pulvinar proin gravida hendrerit lectus a. Non nisi est sit amet facilisis magna.</p></div>
+                <div class="col-3"><img src="img/flower-gf1ae9594f_640.jpg" alt=""> 
+                <p>Dui accumsan sit amet nulla facilisi morbi. Varius vel pharetra vel turpis nunc eget lorem.</p></div>
+                <div class="col-3"><img src="img/butterfly-g46295424b_640.jpg" alt="">
+                <p>Nec dui nunc mattis enim ut. Amet consectetur adipiscing elit ut aliquam purus sit amet.</p></div>
+            </div>
+            
+            <div class="w-75 mx-auto">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, magni fugit. Itaque esse laborum quam praesentium impedit dicta, neque optio enim, accusantium totam sed! Quidem dolor suscipit harum consequatur aperiam!</p>
+            </div> <br>
+            <div class="row">
+                <div class="col-3"><img src="img/field-gc913d5e51_640.jpg" alt="">
+                <p>Semper feugiat nibh sed pulvinar proin gravida hendrerit lectus a. Non nisi est sit amet facilisis magna.</p></div>
+                <div class="col-3"><img src="img/nature-g35c45c189_640.jpg" alt=""> 
+                <p>Dui accumsan sit amet nulla facilisi morbi. Varius vel pharetra vel turpis nunc eget lorem.</p></div>
+                <div class="col-3"><img src="img/fantasy-gfe159b3e9_640.jpg" alt="">
+                <p>Nec dui nunc mattis enim ut. Amet consectetur adipiscing elit ut aliquam purus sit amet.</p></div>
+            </div> <br>
+            <div class="w-75 mx-auto">
+                <p>Turpis egestas maecenas pharetra convallis posuere morbi leo urna. Cursus sit amet dictum sit amet justo donec enim. </p>
+              </div>
+        </section>
+        <section id="section3">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, magni fugit. Itaque esse laborum quam praesentium impedit dicta, neque optio enim, accusantium totam sed. Quidem dolor suscipit harum consequatur aperiam, euismod nisi porta lorem!</p>
+            <div id="carouselExampleIndicators" class="carousel slide mx-auto" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="img/camera-gba375bb93_640.jpg" class="d-block" alt="Photo of Camera">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/camera-g0f0ce2ebb_640.jpg" class="d-block" alt="Photo of Camera">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/camera-g0226b2f8e_640.jpg" class="d-block" alt="Photo of Camera">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </section>
+        <section id="section4">
+            <div class="w-50 mx-auto">
+                <p>
+                    In pellentesque massa placerat duis ultricies lacus sed turpis. 
+                    Quam vulputate dignissim suspendisse in est. In egestas erat imperdiet sed euismod nisi porta lorem. Facilisis mauris sit amet massa vitae tortor 
+                    condimentum lacinia quis!
+                </p>
+            </div>
+            
+            <div id="accordion" class="mx-auto">
+                <h3>Amet mauris commodo quis imperdiet massa tincidunt nunc?</h3>
+                <div>Quam vulputate dignissim suspendisse in est. In egestas erat imperdiet sed euismod nisi porta lorem. 
+                    Facilisis mauris sit amet massa vitae tortor condimentum lacinia quis.
+                    Urna et pharetra pharetra massa massa. Et ultrices neque ornare aenean. 
+                    Malesuada bibendum arcu vitae elementum curabitur vitae nunc sed velit.</div>
+                <h3>Duis ut diam quam nulla porttitor massa id neque aliquam?</h3>
+                <div>Risus nec feugiat in fermentum posuere. Aliquam ut porttitor leo a diam sollicitudin. Vestibulum rhoncus est pellentesque elit ullamcorper dignissim. Nec dui nunc mattis enim ut tellus elementum sagittis vitae.</div>
+                <h3>Amet mauris commodo quis imperdiet massa tincidunt nunc?</h3>
+                <div>At ultrices mi tempus imperdiet nulla malesuada pellentesque. 
+                    Pulvinar etiam non quam lacus suspendisse faucibus interdum posuere lorem. Amet dictum sit amet justo donec enim diam vulputate ut. 
+                    Pellentesque dignissim enim sit amet venenatis urna cursus eget. Tristique magna sit amet purus gravida.</div>     
+                     
+        </section>
+        <section id="section5">
+            <div id="formDiv">
+                <h1>Get in touch!</h1> <br>
+                <ul id="errorList"></ul>
+                <form id="contactForm">
+                    <label for="nameInput">Name: </label>
+                    <input type="text" class="mb-2" id="nameInput" autocomplete="off" onclick="this.select();" placeholder="James Jones">
+                    <br>
+
+                    <label for="emailInput">Email: </label>
+                    <input type="text" class="mb-4" id="emailInput" autocomplete="off" onclick="this.select();" placeholder="anyone@anywhere.com">
+                     <br>
+
+
+                    <textarea rows="4" cols="30" id="messageArea" autocomplete="off" onclick="this.select();" placeholder="Enter your message here!"></textarea> <br>
+
+                    <button type="button" id="submitBtn">Submit</button>
+                    <!--<button type="button" id="adminBtn">ADMIN</button>-->
+                </form>
+            </div>
+            <div id="formCompleteMsg" class="hide">
+                <h2>Thank you for your message! We'll get back to you as soon as we can!</h2>
+                <p>You can also check our <a href="#section4">FAQ</a> for common questions!</p>
+            </div>
+        </section>
+        <footer>
+            <div class="mx-auto">
+                <p>Subscribe to us on our socials to keep up with deals and events!</p>
+                <a href="#"><i class="fa fa-facebook" style="font-size: 60px"></i></a>
+                <a href="#"><i class="fa fa-instagram" style="font-size: 60px"></i></a>
+            </div>
+        </footer>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery-ui-1.12.1/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
