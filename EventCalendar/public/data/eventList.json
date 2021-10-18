@@ -1,0 +1,21 @@
+[
+    {
+      "evtName": "Car Wash Fundraiser",
+      "evtType": "Event Announcement",
+      "evtMessage": "lorem ipsum",
+      "evtDate": "November 19 13:00"
+    },  
+    {
+      "evtName": "Blood Drive",
+      "evtType": "Event Announcement",
+      "evtMessage": "lorem ipsum",
+      "evtDate": "December 17, 1995 15:00"
+    },
+    
+    {
+      "evtName": "Pool Closed",
+      "evtType": "Management Announcement",
+      "evtMessage": "lorem ipsum",
+      "evtDate": "October 17"
+    }
+  ]
